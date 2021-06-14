@@ -28,5 +28,3 @@ Se desarrolla proyecto en Java, enfocado unicamente en Backend, se integra Sprin
         LEFT JOIN business pt 
         ON p.id_empresa=pt.id_empresa
     }
-
-PREGUNTAR SI JAJAJA
