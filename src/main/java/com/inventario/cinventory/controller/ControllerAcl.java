@@ -53,13 +53,10 @@ public class ControllerAcl {
         }
     }
 
-    //CONSULTAR SI EXISTE LA MANERA DE TENER 2 PARAMETROS DE BUSQUEDA EN UNA RESPUESTA
-    //BUSCAR TANTO POR PYECTO Y POR NOMBRE
     @GetMapping("/searchByProyect")
-    public ResponseEntity<List<Acl>> searchByProyect (@RequestParam(required = false)String proyectoEmpleado, String nombreEmpleado){
+    public ResponseEntity<List<Acl>> searchByProyect (@RequestParam(required = false) String nombreEmpleado){
         try{
             List<Acl>proyect= new ArrayList<Acl>();
-            crud.findByProyectoEmpleadoContaining(proyectoEmpleado).forEach(proyect::add);
             crud.findByNombreEmpleadoContaining(nombreEmpleado).forEach(proyect::add);
             if (proyect.isEmpty()){
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -73,7 +70,7 @@ public class ControllerAcl {
     @PostMapping("/newMember")
     public ResponseEntity<Acl> createNewMember (@RequestBody Acl newMember){
         try{
-            Acl _acl = crud.save(new Acl(newMember.getRutificador(), newMember.getNombreEmpleado(),newMember.getNacionalidad(), newMember.getProyectoEmpleado(),newMember.getCorreoElectronico(), newMember.getFechaIngreso(), newMember.getFechaTermino()));
+            Acl _acl = crud.save(new Acl(newMember.getRutificador(), newMember.getNombreEmpleado(),newMember.getNacionalidad(),newMember.getCorreoElectronico(),newMember.getFechaIngreso(),newMember.getFechaTermino(), newMember.getIdEmpresa()));
             return new ResponseEntity<>(_acl, HttpStatus.CREATED);
         }catch (Exception e){
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -90,10 +87,10 @@ public class ControllerAcl {
                 _acl.setRutificador(updateMember.getRutificador());
                 _acl.setNombreEmpleado(updateMember.getNombreEmpleado());
                 _acl.setNacionalidad(updateMember.getNacionalidad());
-                _acl.setProyectoEmpleado(updateMember.getProyectoEmpleado());
                 _acl.setCorreoElectronico(updateMember.getCorreoElectronico());
                 _acl.setFechaIngreso(updateMember.getFechaIngreso());
                 _acl.setFechaTermino(updateMember.getFechaTermino());
+                _acl.setIdEmpresa(updateMember.getIdEmpresa());
                 return new ResponseEntity<>(crud.save(_acl),HttpStatus.OK);
             }else {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -122,4 +119,5 @@ public class ControllerAcl {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
 }

@@ -8,9 +8,9 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "ACL")
-@JsonPropertyOrder({"id", "rutificador", "nombreEmpleado","nacionalidad", "proyectoEmpleado", "correoElectronico", "fechaIngreso", "fechaTermino"})
-//sacar proyectoEmpleado - Fechaingreso . fechaTermino
+@Table(name = "Members")
+@JsonPropertyOrder({"id", "rutificador", "nombreEmpleado","nacionalidad","correoElectronico","fechaIngreso","fechaTermino"})
+
 public class Acl {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,9 +31,6 @@ public class Acl {
     @JsonProperty("nacionalidad")
     private String nacionalidad;
 
-    @Column(name= "proyectoEmpleado")
-    @JsonProperty("proyectoEmpleado")
-    private String proyectoEmpleado;
 
     @Column(name= "correoElectronico")
     @JsonProperty("correoElectronico")
@@ -48,6 +45,11 @@ public class Acl {
     @Column(name= "fechaTermino")
     @JsonProperty("fechaTermino")
     private LocalDate  fechaTermino;
+
+    @Column(name= "idEmpresa")
+    @JsonProperty("idEmpresa")
+    private int idEmpresa;
+
 
 
     public int getId() { return id; }
@@ -66,34 +68,32 @@ public class Acl {
 
     public void setNacionalidad(String nacionalidad) {this.nacionalidad = nacionalidad; }
 
-    public String getProyectoEmpleado() { return proyectoEmpleado; }
-
-    public void setProyectoEmpleado(String proyectoEmpleado) { this.proyectoEmpleado = proyectoEmpleado; }
-
     public String getCorreoElectronico() { return correoElectronico; }
 
     public void setCorreoElectronico(String correoElectronico) { this.correoElectronico = correoElectronico; }
 
-    public LocalDate getFechaIngreso() { return fechaIngreso; }
+    public int getIdEmpresa() {return idEmpresa; }
 
-    public void setFechaIngreso(LocalDate fechaIngreso) { this.fechaIngreso = fechaIngreso; }
+    public void setIdEmpresa(int idEmpresa) {this.idEmpresa = idEmpresa; }
+
+    public LocalDate getFechaIngreso() {return fechaIngreso; }
+
+    public void setFechaIngreso(LocalDate fechaIngreso) {this.fechaIngreso = fechaIngreso; }
 
     public LocalDate getFechaTermino() {return fechaTermino; }
 
     public void setFechaTermino(LocalDate fechaTermino) {this.fechaTermino = fechaTermino; }
 
-
-    public Acl(String rutificador, String nombreEmpleado, String nacionalidad,String proyectoEmpleado, String correoElectronico, LocalDate fechaIngreso, LocalDate fechaTermino) {
+    public Acl(String rutificador, String nombreEmpleado, String nacionalidad, String correoElectronico, LocalDate fechaIngreso, LocalDate fechaTermino, int idEmpresa) {
+        this.id = id;
         this.rutificador = rutificador;
         this.nombreEmpleado = nombreEmpleado;
         this.nacionalidad = nacionalidad;
-        this.proyectoEmpleado = proyectoEmpleado;
         this.correoElectronico = correoElectronico;
         this.fechaIngreso = fechaIngreso;
         this.fechaTermino = fechaTermino;
-
+        this.idEmpresa = idEmpresa;
     }
-
 
     public Acl(){ }
 }
