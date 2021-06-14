@@ -8,6 +8,6 @@ import java.util.List;
 public interface IService extends JpaRepository<Acl, Integer> {
 
     List <Acl> findByNombreEmpleadoContaining(String empleado);
-    List <Acl> findByProyectoEmpleadoContaining(String employee);
+
 
 }

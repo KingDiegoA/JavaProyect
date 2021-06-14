@@ -12,7 +12,6 @@ import java.time.LocalDate;
 @JsonPropertyOrder({"idEmpresa", "nombreEmpresa", "fechaIngreso","fechaTermino"})
 public class Business {
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "idEmpresa")
     @JsonProperty("idEmpresa")
@@ -31,6 +30,7 @@ public class Business {
     @Column(name= "fechaTermino")
     @JsonProperty("fechaTermino")
     private LocalDate  fechaTermino;
+
 
     public int getIdEmpresa() {return idEmpresa; }
 
