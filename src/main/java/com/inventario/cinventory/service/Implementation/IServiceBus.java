@@ -6,10 +6,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface IService extends JpaRepository<Acl, Integer> {
+public interface IServiceBus extends JpaRepository<Business, Integer> {
 
-    List <Acl> findByNombreEmpleadoContaining(String empleado);
-
+    List<Business> findByIdEmpresaContaining(String empresa);
 
 
 }
