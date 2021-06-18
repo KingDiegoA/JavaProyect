@@ -70,7 +70,7 @@ public class ControllerAcl {
     @PostMapping("/newMember")
     public ResponseEntity<Acl> createNewMember (@RequestBody Acl newMember){
         try{
-            Acl _acl = crud.save(new Acl(newMember.getRutificador(), newMember.getNombreEmpleado(),newMember.getNacionalidad(),newMember.getCorreoElectronico(),newMember.getFechaIngreso(),newMember.getFechaTermino(), newMember.getIdEmpresa()));
+            Acl _acl = crud.save(new Acl(newMember.getRutificador(), newMember.getNombreEmpleado(),newMember.getNacionalidad(),newMember.getCorreoElectronico(),newMember.getFechaIngreso(),newMember.getFechaTermino(), newMember.getNombreEmpresa()));
             return new ResponseEntity<>(_acl, HttpStatus.CREATED);
         }catch (Exception e){
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -90,7 +90,8 @@ public class ControllerAcl {
                 _acl.setCorreoElectronico(updateMember.getCorreoElectronico());
                 _acl.setFechaIngreso(updateMember.getFechaIngreso());
                 _acl.setFechaTermino(updateMember.getFechaTermino());
-                _acl.setIdEmpresa(updateMember.getIdEmpresa());
+                _acl.setNombreEmpresa(updateMember.getNombreEmpresa());
+
                 return new ResponseEntity<>(crud.save(_acl),HttpStatus.OK);
             }else {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);

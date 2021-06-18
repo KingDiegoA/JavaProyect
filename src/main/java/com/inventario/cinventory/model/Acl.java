@@ -9,7 +9,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "Members")
-@JsonPropertyOrder({"id", "rutificador", "nombreEmpleado","nacionalidad","correoElectronico","fechaIngreso","fechaTermino"})
+@JsonPropertyOrder({"id", "rutificador", "nombreEmpleado","nacionalidad","correoElectronico","fechaIngreso","fechaTermino", "nombreEmpresa"})
 
 public class Acl {
 
@@ -47,9 +47,9 @@ public class Acl {
     @JsonProperty("fechaTermino")
     private LocalDate  fechaTermino;
 
-    @Column(name= "idEmpresa")
-    @JsonProperty("idEmpresa")
-    private int idEmpresa;
+    @Column(name= "nombreEmpresa")
+    @JsonProperty("nombreEmpresa")
+    private String nombreEmpresa;
 
     public int getId() { return id; }
 
@@ -71,9 +71,9 @@ public class Acl {
 
     public void setCorreoElectronico(String correoElectronico) { this.correoElectronico = correoElectronico; }
 
-    public int getIdEmpresa() {return idEmpresa; }
+    public String getNombreEmpresa() {return nombreEmpresa; }
 
-    public void setIdEmpresa(int idEmpresa) {this.idEmpresa = idEmpresa; }
+    public void setNombreEmpresa(String idEmpresa) {this.nombreEmpresa = idEmpresa; }
 
     public LocalDate getFechaIngreso() {return fechaIngreso; }
 
@@ -83,7 +83,7 @@ public class Acl {
 
     public void setFechaTermino(LocalDate fechaTermino) {this.fechaTermino = fechaTermino; }
 
-    public Acl(String rutificador, String nombreEmpleado, String nacionalidad, String correoElectronico, LocalDate fechaIngreso, LocalDate fechaTermino, int idEmpresa) {
+    public Acl(String rutificador, String nombreEmpleado, String nacionalidad, String correoElectronico, LocalDate fechaIngreso, LocalDate fechaTermino, String nombreEmpresa) {
         this.id = id;
         this.rutificador = rutificador;
         this.nombreEmpleado = nombreEmpleado;
@@ -91,7 +91,7 @@ public class Acl {
         this.correoElectronico = correoElectronico;
         this.fechaIngreso = fechaIngreso;
         this.fechaTermino = fechaTermino;
-        this.idEmpresa = idEmpresa;
+        this.nombreEmpresa = nombreEmpresa;
     }
 
     public Acl(){ }
