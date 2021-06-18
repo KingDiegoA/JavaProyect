@@ -23,6 +23,7 @@ public class Acl {
     @JsonProperty("rutificador")
     private String rutificador;
 
+
     @Column(name= "nombreEmpleado")
     @JsonProperty("nombreEmpleado")
     private String nombreEmpleado;
@@ -49,8 +50,6 @@ public class Acl {
     @Column(name= "idEmpresa")
     @JsonProperty("idEmpresa")
     private int idEmpresa;
-
-
 
     public int getId() { return id; }
 
