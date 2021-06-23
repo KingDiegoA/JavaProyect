@@ -53,18 +53,6 @@ public class ControllerAcl {
         }
     }
 
-    @GetMapping("/searchByProyect")
-    public ResponseEntity<List<Acl>> searchByProyect (@RequestParam(required = false) String nombreEmpleado){
-        try{
-            List<Acl>proyect= new ArrayList<Acl>();
-            crud.findByNombreEmpleadoContaining(nombreEmpleado).forEach(proyect::add);
-            if (proyect.isEmpty()){
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            }return new ResponseEntity<>(proyect, HttpStatus.OK);
-        }catch (Exception e){
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
 
     //METODO QUE PERMITE CREAR UN MIEMBRO NUEVO EN ACL
     @PostMapping("/newMember")
