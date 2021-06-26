@@ -95,6 +95,18 @@ public class Acl {
     }
 
     public Acl(){ }
+
+    public void roll(int i) {
+
+    }
+
+    public int resultado() {
+        return id;
+    }
+
+    public String resultado2() {
+        return "ACL";
+    }
 }
 
 
