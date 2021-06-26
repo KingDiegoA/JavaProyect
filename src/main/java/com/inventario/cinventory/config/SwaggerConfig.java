@@ -42,7 +42,7 @@ public class SwaggerConfig {
         return new ApiInfo(
                 "Java - Backend - Springboot - MySql - CRUD - Postman",
                 "Control de Miembros ACL",
-                "V2",
+                "V3",
                 null,
                 new Contact("Diego San Martin", null, "d.sanmartinn10@gmail.com"),
                 null, null, Collections.emptyList());
