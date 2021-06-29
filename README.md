@@ -1,12 +1,13 @@
 # JavaProyect
 Java - Backend - Springboot - Mysql -CRUD - Postman - Swagger
 
-# Nuevas Implementaciones
-    {
-        Se implementaron manejos de errores con JUNIT
-        Se implementaron Test mediante TDD
-        Se creo un procedimiento de instalacion y ejecucion
-    }
+### Nuevas Implementaciones
+
+```
+    Se implementaron manejos de errores con JUNIT
+    Se implementaron Test mediante TDD
+    Se creo un procedimiento de instalacion y ejecucion
+```
     
 ### Pasos para Ejecutar
 _Paso N°1_
