@@ -14,13 +14,14 @@ Java - Backend - Springboot - Mysql -CRUD - Postman - Swagger
     }
 
 # Compilar y Ejecutar el Proyecto
-_Se debe generar la conexion a la Bd antes de proceder con la ejecucion para evitar errores
-_Para compilar el proyecto se requiere Java y Maven instalado. Ingresar al directorio JavProject ejecutar el siguiente comando maven
+_Se debe generar la conexion a la Bd antes de proceder con la ejecucion para evitar errores_
+Para compilar el proyecto se requiere Java y Maven instalado. Ingresar al directorio JavProject ejecutar el siguiente comando maven
 
     {
         mvn package
         * [IntelliJ](https://www.jetbrains.com/es-es/idea/) - Entorno de desarrollo
     }
+   * [IntelliJ](https://www.jetbrains.com/es-es/idea/) - Entorno de desarrollo
 
 Luego de compilar el proyecto ingresar al directorio target ejecutar el siguiente comando java
 
