@@ -11,16 +11,15 @@ Java - Backend - Springboot - Mysql -CRUD - Postman - Swagger
 # Pasos para Ejecutar
     {
         Se debe instalar Xampp, iniciar acciones de Apache y MySQL, Puerto por defecto 3306
-   * [IntelliJ](https://www.jetbrains.com/es-es/idea/) - Entorno de desarrollo
     }
+   * [Xampp](https://www.apachefriends.org/es/index.html) - Gestor de Base de Datos
 
 # Compilar y Ejecutar el Proyecto
 _Se debe generar la conexion a la Bd antes de proceder con la ejecucion para evitar errores_
-Para compilar el proyecto se requiere Java y Maven instalado. Ingresar al directorio JavProject ejecutar el siguiente comando maven
+_Para compilar el proyecto se requiere Java y Maven instalado. Ingresar al directorio JavProject ejecutar el siguiente comando maven_
 
     {
         mvn package
-        * [IntelliJ](https://www.jetbrains.com/es-es/idea/) - Entorno de desarrollo
     }
 
 
