@@ -11,6 +11,7 @@ Java - Backend - Springboot - Mysql -CRUD - Postman - Swagger
 # Pasos para Ejecutar
     {
         Se debe instalar Xampp, iniciar acciones de Apache y MySQL, Puerto por defecto 3306
+   * [IntelliJ](https://www.jetbrains.com/es-es/idea/) - Entorno de desarrollo
     }
 
 # Compilar y Ejecutar el Proyecto
@@ -21,7 +22,7 @@ Para compilar el proyecto se requiere Java y Maven instalado. Ingresar al direct
         mvn package
         * [IntelliJ](https://www.jetbrains.com/es-es/idea/) - Entorno de desarrollo
     }
-   * [IntelliJ](https://www.jetbrains.com/es-es/idea/) - Entorno de desarrollo
+
 
 Luego de compilar el proyecto ingresar al directorio target ejecutar el siguiente comando java
 
