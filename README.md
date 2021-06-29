@@ -24,22 +24,19 @@ _Paso N°2_
 ```
    * [IntelliJ](https://www.jetbrains.com/es-es/idea/download/) - Entorno de Desarrollo
 
-### Compilar y Ejecutar el Proyecto
+# Compilar y Ejecutar el Proyecto
 _Paso N°3_
 
-
-```
 _Se debe generar la conexion a la Bd antes de proceder con la ejecucion para evitar errores_
 _Para compilar el proyecto se requiere Java y Maven instalado. Ingresar al directorio JavProject ejecutar el siguiente comando maven_
 
+```
         mvn package
 ```
 
-
-
+_Luego de compilar el proyecto ingresar al directorio target ejecutar el siguiente comando java_
 
 ```
-_Luego de compilar el proyecto ingresar al directorio target ejecutar el siguiente comando java_
       java -jar ./CInventory-0.0.1-SNAPSHOT.jar
 ```
 
