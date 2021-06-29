@@ -10,16 +10,18 @@ Java - Backend - Springboot - Mysql -CRUD - Postman - Swagger
     
 ### Pasos para Ejecutar
 _Paso N°1_
+
     {
         Se debe instalar Xampp, iniciar acciones de Apache y MySQL, Puerto por defecto 3306
     }
    * [Xampp](https://www.apachefriends.org/es/index.html) - Gestor de Base de Datos
    
 _Paso N°2_
+
     {
         Se debe iniciar el projecto mediante IntelliJ IDEA
     }
-     * [IntelliJ](https://www.jetbrains.com/es-es/idea/download/) - Entorno de Desarrollo
+   * [IntelliJ](https://www.jetbrains.com/es-es/idea/download/) - Entorno de Desarrollo
 
 ### Compilar y Ejecutar el Proyecto
 _Se debe generar la conexion a la Bd antes de proceder con la ejecucion para evitar errores_
