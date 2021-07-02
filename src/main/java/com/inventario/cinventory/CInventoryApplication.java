@@ -26,7 +26,7 @@ public class CInventoryApplication {
         catch (InputMismatchException e){
             System.out.println("Valor erroneo");
         }finally {
-            System.out.println("Proceso Terminado");
+            System.out.println("Proceso Completado");
         }
 
     }

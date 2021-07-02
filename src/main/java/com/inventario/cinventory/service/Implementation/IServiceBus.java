@@ -10,5 +10,8 @@ public interface IServiceBus extends JpaRepository<Business, Integer> {
 
     List<Business> findByIdEmpresaContaining(String empresa);
 
+   //public Business findByName(String nombreEmpresa);
+
+
 
 }
