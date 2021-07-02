@@ -1,6 +1,23 @@
 # JavaProyect
 Java - Backend - Springboot - Mysql -CRUD - Postman - Swagger
 
+#Tecnologias
+```
+   Spring Framework
+   Spring Boot
+   Spring JPA + Hibernate
+   Junit Jupiter 5
+   MySql JDBC Driver
+```
+#Softwares
+```
+   JDK
+   MySQL
+   XAMPP
+   Intellj IDEA
+```
+
+
 ### Nuevas Implementaciones
 
 ```
