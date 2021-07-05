@@ -15,6 +15,8 @@ Java - Backend - Springboot - Mysql -CRUD - Postman - Swagger
    MySQL
    XAMPP
    Intellj IDEA
+   Postman
+   GIT
 ```
 
 
