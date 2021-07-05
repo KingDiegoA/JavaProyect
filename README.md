@@ -8,6 +8,7 @@ Java - Backend - Springboot - Mysql -CRUD - Postman - Swagger
    Spring JPA + Hibernate
    Junit Jupiter 5
    MySql JDBC Driver
+   Swagger2
 ```
 #Softwares
 ```
