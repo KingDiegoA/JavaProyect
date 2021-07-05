@@ -83,7 +83,7 @@ public class Acl {
 
     public void setFechaTermino(LocalDate fechaTermino) {this.fechaTermino = fechaTermino; }
 
-    public Acl(String rutificador, String nombreEmpleado, String nacionalidad, String correoElectronico, LocalDate fechaIngreso, LocalDate fechaTermino, String nombreEmpresa) {
+    public Acl(Integer id, String rutificador, String nombreEmpleado, String nacionalidad, String correoElectronico, LocalDate fechaIngreso, LocalDate fechaTermino, String nombreEmpresa) {
         this.id = id;
         this.rutificador = rutificador;
         this.nombreEmpleado = nombreEmpleado;
@@ -106,6 +106,20 @@ public class Acl {
 
     public String resultado2() {
         return "ACL";
+    }
+
+    @Override
+    public String toString() {
+        return "Acl{" +
+                "id=" + id +
+                ", rutificador='" + rutificador + '\'' +
+                ", nombreEmpleado='" + nombreEmpleado + '\'' +
+                ", nacionalidad='" + nacionalidad + '\'' +
+                ", correoElectronico='" + correoElectronico + '\'' +
+                ", fechaIngreso=" + fechaIngreso +
+                ", fechaTermino=" + fechaTermino +
+                ", nombreEmpresa='" + nombreEmpresa + '\'' +
+                '}';
     }
 }
 
