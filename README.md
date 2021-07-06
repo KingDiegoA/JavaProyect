@@ -70,5 +70,6 @@ _Luego de compilar el proyecto ingresar al directorio target ejecutar el siguien
 
 ### Comentarios
 ```
-      Se debe tener instalado Maven
+      Se debe tener instalado Maven + Java JDK
+      Se debe tener configurado las variables de entorno
 ```
