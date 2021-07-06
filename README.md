@@ -72,4 +72,5 @@ _Luego de compilar el proyecto ingresar al directorio target ejecutar el siguien
 ```
       Se debe tener instalado Maven + Java JDK
       Se debe tener configurado las variables de entorno
+      Se debe crear la BD 'bd_inventario'
 ```
