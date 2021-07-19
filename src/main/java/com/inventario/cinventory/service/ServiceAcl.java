@@ -11,19 +11,16 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+
 
 
 @Service
 public class ServiceAcl implements ImpService {
 
-    private final Path storage;
     Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
 
     public ServiceAcl() throws IOException {
-        storage = Paths.get("JsonResponse").toAbsolutePath().normalize();
+        Path storage = Paths.get("JsonResponse").toAbsolutePath().normalize();
         Files.createDirectories(storage);
     }
 

@@ -20,7 +20,7 @@ public class CInventoryApplication {
             if (x==1){
                 SpringApplication.run(CInventoryApplication.class, args);
             }else {
-                System.out.println("");
+                System.out.println();
             }
         }
         catch (InputMismatchException e){

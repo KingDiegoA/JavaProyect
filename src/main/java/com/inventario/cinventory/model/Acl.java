@@ -13,7 +13,7 @@ import java.time.LocalDate;
 
 public class Acl {
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Id
     @Column(name = "id")
     @JsonProperty("id")
@@ -53,7 +53,6 @@ public class Acl {
 
     public int getId() { return id; }
 
-    public void setId(int id) { this.id = id; }
 
     public String getRutificador() { return rutificador; }
 
@@ -96,17 +95,6 @@ public class Acl {
 
     public Acl(){ }
 
-    public void roll(int i) {
-
-    }
-
-    public int resultado() {
-        return id;
-    }
-
-    public String resultado2() {
-        return "ACL";
-    }
 
     @Override
     public String toString() {
